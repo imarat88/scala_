@@ -1,0 +1,19 @@
+cd && wget https://raw.githubusercontent.com/chrishantha/install-java/master/install-java.sh
+
+chmod +x install-java.sh
+
+sudo apt install unzip
+
+sudo -E ./install-java.sh -f </path/to/oracle-java.tar.gz> -p </usr/lib/jvm>
+as example
+sudo -E ./install-java.sh -f ~/Downloads/jdk-8u202-linux-x64.tar.gz -p /usr/lib/jvm
+
+
+
+Uninstalling Oracle Java installed with install-java.sh
+
+cd && wget https://raw.githubusercontent.com/chrishantha/install-java/master/uninstall-java.sh
+
+chmod +x uninstall-java.sh
+
+sudo -E ./uninstall-java.sh -p <java_dist_dir>
