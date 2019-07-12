@@ -1,0 +1,44 @@
+/ Keywords
+<-  // Used on for-comprehensions, to separate pattern from generator
+=>  // Used for function types, function literals and import renaming
+
+// Reserved
+( )        // Delimit expressions and parameters
+[ ]        // Delimit type parameters
+{ }        // Delimit blocks
+.          // Method call and path separator
+// /* */   // Comments
+#          // Used in type notations
+:          // Type ascription or context bounds
+<: >:      // Upper and lower bounds
+<%         // View bounds (deprecated)
+" """      // Strings
+'          // Indicate symbols and characters
+@          // Annotations and variable binding on pattern matching
+`          // Denote constant or enable arbitrary identifiers
+,          // Parameter separator
+;          // Statement separator
+_*         // vararg expansion
+_          // Many different meanings
+
+
+import scala._    // Wild card -- all of Scala is imported
+import scala.{ Predef => _, _ } // Exclusion, everything except Predef
+def f[M[_]]       // Higher kinded type parameter
+def f(m: M[_])    // Existential type
+_ + _             // Anonymous function placeholder parameter
+m _               // Eta expansion of method into method value
+m(_)              // Partial function application
+_ => 5            // Discarded parameter
+case _ =>         // Wild card pattern -- matches anything
+f(xs: _*)         // Sequence xs is passed as multiple parameters to f(ys: T*)
+case Seq(xs @ _*) // Identifier xs is bound to the whole matched sequence
+
+Traits and classes can have companion objects (an object with the same name as the class/trait).
+
+Companion objects have a few uses
+
+    Factory methods
+    An alternative to Java static methods (which Scala syntax doesn’t support)
+    A way to manage the import of functions and implicits
+
