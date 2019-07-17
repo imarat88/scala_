@@ -1,0 +1,5 @@
+Assume your baseclass works with a member int. Now your subtype requires that int to be positive. This is strengthened pre-conditions, and now any code that worked perfectly fine before with negative ints is broken.
+
+Likewise, assume the same scenario, but the base class used to guarantee that the member would be positive after being called. Then the subtype changes the behavior to allow negative ints. Code that works on the object (and assumes that the post-condition is a positive int) is now broken since the post-condition is not upheld.
+
+These are of course trivial examples, but the concept holds. Stuff like leaving a file/database connection open is an example of an eased post-condition that leads to issues.
