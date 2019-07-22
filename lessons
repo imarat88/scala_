@@ -41,4 +41,13 @@ Companion objects have a few uses
     Factory methods
     An alternative to Java static methods (which Scala syntax doesn’t support)
     A way to manage the import of functions and implicits
+==============================================
+Case objects vs Case classes
+Things that are missing in case objects.
 
+    Apply, Un-apply methods. We will see about this later
+    There are no copy methods since this is a singleton
+    No method for structural equality comparison
+    No constructor as well
+    
+    =============================================
