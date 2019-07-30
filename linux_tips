@@ -1,0 +1,3 @@
+PS1=$
+PROMPT_COMMAND=
+echo -en "\033]0;New title\a"
