@@ -1,0 +1,3 @@
+# commands that tends to give error and that were correctly coded
+
+val config = Source.fromInputStream(getClass.getClassLoader().getResourceAsStream("application.properties"))
